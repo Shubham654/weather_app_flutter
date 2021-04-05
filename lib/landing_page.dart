@@ -12,7 +12,6 @@ class LandingPage extends StatefulWidget {
 
 class _LandingPageState extends State<LandingPage> {
   WeatherModel weather = WeatherModel();
-  final myController = TextEditingController();
   static String location = "Nagpur";
   bool _isLoading = true;
   var baseUrl =
@@ -70,18 +69,6 @@ class _LandingPageState extends State<LandingPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Row(
-                            children: [
-                              Flexible(child: TextField()),
-                              IconButton(
-                                icon: Icon(Icons.location_searching),
-                                iconSize: 40,
-                                color: Colors.white,
-                                splashColor: Colors.purple,
-                                onPressed: () {},
-                              ),
-                            ],
-                          ),
                           Text(
                             weather.name,
                             style: GoogleFonts.lato(
